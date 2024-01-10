@@ -1,0 +1,148 @@
+.w-55 {
+  width: 55%;
+}
+
+.w-45 {
+  width: 45%;
+}
+
+.w-450px {
+  width: 450px;
+}
+
+.w-375px {
+  width: 375px;
+}
+
+.w-320px {
+  width: 320px;
+}
+
+.services-illustration {
+  width: 270px;
+  height: 265px;
+  border-radius: 8px 8px 120px 8px;
+}
+
+.bg-green-1 {
+  background: #22ddb1;
+}
+
+.bg-blue-1 {
+  background-color: #263cfc;
+}
+
+.bg-blue-2 {
+  background-color: #5a34f2;
+}
+
+.bg-purple-1 {
+  background-color: #a94cff;
+}
+
+.bg-warning-1 {
+  background-color: #ff9a3c;
+}
+
+.bg-pink-1 {
+  background-color: #f1909c;
+}
+
+.bg-red-1 {
+  background-color: #dc143c;
+}
+
+.bg-yellow-1 {
+  background-color: #ffd800;
+}
+
+.bg-gray-1 {
+  background-color: #cccccc;
+}
+
+.services__separator {
+  border: 0.5px solid #606060;
+  margin-top: 72px;
+  margin-bottom: 72px;
+}
+
+.sub-headings__dot {
+  border-radius: 0px 0px 8px 0px;
+  background: #a8a8a8;
+  height: 13px;
+  width: 13px;
+}
+
+.benefits-illustration {
+  width: 370px;
+  height: 362px;
+  border-radius: 8px 8px 120px 8px;
+}
+
+.experts-thumbnail {
+  width: 341px;
+  height: 390px;
+}
+
+.br-top-right-194 {
+  border-top-right-radius: 194px;
+}
+
+.br-bottom-right-194 {
+  border-bottom-right-radius: 194px;
+}
+
+.br-top-left-194 {
+  border-top-left-radius: 194px;
+}
+
+.br-bottom-left-194 {
+  border-bottom-left-radius: 194px;
+}
+
+.book-slot-container {
+  width: 1088px;
+  height: 1223px;
+  border-radius: 0px 0px 544px 0px;
+  background: #323232;
+}
+
+.book-slot-container > div:first-child > div {
+  width: 527px;
+  height: 602px;
+  border-radius: 0px 0px 300px 0px;
+}
+
+.book-slot-container > div:first-child > div > div:nth-child(2) {
+  width: 310px;
+}
+
+.book-slot-container > div:nth-child(2) > div:nth-child(2) > div:first-child {
+  width: 270px;
+}
+
+.main-container__lets-talk {
+  border-radius: 8px 8px 120px 8px;
+  width: 213px;
+  height: 218px;
+}
+
+.main-container__dot {
+  width: 7.25px;
+  height: 7.25px;
+  border-radius: 0px 0px 4px 0px;
+}
+
+.footer-white-container {
+  width: 341.213px;
+  height: 554.492px;
+  border-radius: 0px 0px 194.31px 0px;
+  background: #fff;
+}
+
+.footer-container-2 {
+  width: 341.213px;
+  height: 309.693px;
+  border-radius: 194.31px 0px 0px 0px;
+  background: #fff;
+}

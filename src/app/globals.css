@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('../app/styles/header.css');
+@import url('../app/styles/home.css');
+
+:root {
+  --background-main: #242424;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: white;
+  background: var(--background-main);
+  line-height: normal;
+}
+
+.container {
+  max-width: 1350px;
+  margin: auto;
+}
+
+.gray-1 {
+  color: #a8a8a8;
+}
+
+.gray-2 {
+  color: #676767;
+}
+
+.gray-3 {
+  color: #898989;
+}
+
+.gray-4 {
+  color: #494949;
+}
+
+.gray-5 {
+  color: #b2b2b2;
+}
+
+.gray-6 {
+  color: #dcdcdc;
+}
+
+.gray-7 {
+  color: #a4a4a4;
+}
+
+.black-1 {
+  color: #272727;
+}
+
+.black-2 {
+  color: #242424;
+}
+
+.black-3 {
+  color: #120404;
+}
+
+.font-84 {
+  font-size: 84px;
+}
+
+.font-72 {
+  font-size: 72px;
+}
+
+.font-32 {
+  font-size: 32px;
+}
+
+.font-36 {
+  font-size: 36px;
+}
+
+.font-48 {
+  font-size: 48px;
+}
+
+.font-42 {
+  font-size: 42px;
+}
+
+.font-40 {
+  font-size: 40px;
+}
+
+.font-28 {
+  font-size: 28px;
+}
+
+.font-24 {
+  font-size: 24px;
+}
+
+.font-22 {
+  font-size: 22px;
+}
+
+.font-27 {
+  font-size: 27px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.bg-black-1 {
+  background: #303030;
+}
+
+.line-height-normal {
+  line-height: normal;
+}
