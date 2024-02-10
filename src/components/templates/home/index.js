@@ -9,17 +9,31 @@ import Services from './services';
 
 export default function HomeTemplate() {
   return (
-    <div className='container'>
-      <Main />
-      <Services />
-      <div className='services__separator' />
-      <Deliverables />
-      <div className='services__separator' />
-      <KPI />
-      <Benefits />
-      <Partner />
-      <Experts />
-      <Footer />
-    </div>
+    <>
+      <div className='container'>
+        <Main />
+        <div id='benefits'>
+          <Benefits />
+        </div>
+        <div id='services'>
+          <Services />
+        </div>
+        <div id='deliverables'>
+          <Deliverables />
+        </div>
+        <div id='kpi'>
+          <KPI />
+        </div>
+      </div>
+      <div id='partner'>
+        <Partner />
+      </div>
+      <div className='container'>
+        <div id='education'>
+          <Experts />
+        </div>
+        <Footer />
+      </div>
+    </>
   );
 }

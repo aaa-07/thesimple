@@ -1,18 +1,18 @@
 .header-container {
-  height: 93px;
-  padding-bottom: 20px;
+  height: 80px;
+  padding-bottom: 16px;
   position: relative;
 }
 
 .header-container__lets-talk {
-  position: absolute;
-  width: 82px;
-  height: 84px;
+  position: fixed;
+  width: 172px;
+  height: 40px;
   border-radius: 3.08px 3.08px 46.194px 3.08px;
   background: #fff;
   line-height: normal;
-  bottom: -32px;
-  right: 0;
+  top: 20px;
+  right: 35px;
 }
 
 .header-bg {

@@ -12,7 +12,7 @@
 
 body {
   color: white;
-  background: var(--background-main);
+  background-color: var(--background-main);
   line-height: normal;
 }
 
@@ -47,6 +47,10 @@ body {
 
 .gray-7 {
   color: #a4a4a4;
+}
+
+.gray-8 {
+  color: #c2c2c2;
 }
 
 .black-1 {
@@ -93,6 +97,10 @@ body {
   font-size: 28px;
 }
 
+.font-27 {
+  font-size: 27px;
+}
+
 .font-24 {
   font-size: 24px;
 }
@@ -121,8 +129,60 @@ body {
   font-size: 14px;
 }
 
+.bg-black-3 {
+  background-color: var(--background-main);
+}
+
 .bg-black-1 {
-  background: #303030;
+  background-color: #303030;
+}
+
+.bg-black-2 {
+  background-color: #2f2f2f;
+}
+
+.bg-green-1 {
+  background-color: #22ddb1;
+}
+
+.bg-blue-1 {
+  background-color: #263cfc;
+}
+
+.bg-blue-2 {
+  background-color: #5a34f2;
+}
+
+.bg-purple-1 {
+  background-color: #a94cff;
+}
+
+.bg-warning-1 {
+  background-color: #ff9a3c;
+}
+
+.bg-pink-1 {
+  background-color: #f1909c;
+}
+
+.bg-pink-2 {
+  background-color: #f66884;
+}
+
+.bg-red-1 {
+  background-color: #dc143c;
+}
+
+.bg-yellow-1 {
+  background-color: #ffd800;
+}
+
+.bg-yellow-2 {
+  background-color: #ffe96d;
+}
+
+.bg-gray-1 {
+  background-color: #cccccc;
 }
 
 .line-height-normal {

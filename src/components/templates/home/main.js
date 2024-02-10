@@ -1,9 +1,33 @@
-import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import Router from 'next/router';
+import React, {useEffect, useRef} from 'react';
 
 export default function Main() {
+  const ref = useRef();
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.boundingClientRect.bottom < 0) {
+            document.getElementById('header').className = 'header-bg sticky top-0 z-20 block';
+            //   entry.target.classList.add('height-auto', 'mt-6');
+          } else {
+            document.getElementById('header').className = 'header-bg sticky top-0 z-20 hidden';
+            // setShow(false);
+          }
+        });
+      },
+      {rootMargin: '0px'},
+    );
+    observer.observe(ref.current);
+  }, []);
   return (
-    <>
-      <div className='font-36 font-bold text-center mt-40'>
+    <div ref={ref}>
+      <div className='font-24 font-extrabold flex items-baseline justify-center mt-40'>
+        <Image src='/images/logo.svg' height={36} width={36} alt='logo' /> <div className='ml-1'>thesimple</div>
+      </div>
+      <div className='font-36 font-bold text-center mt-9'>
         Discover <span className='main-container__dot inline-block bg-white mx-1' /> Design <span className='main-container__dot inline-block bg-white mx-1' /> Growth
       </div>
       <h1 className='font-84 font-extrabold mt-2 text-center'>We’re product innovation team</h1>
@@ -11,16 +35,12 @@ export default function Main() {
         We discover user needs & turns them into product success with <br /> thesimple strategy & design
       </div>
       <div className='mt-20 flex justify-center'>
-        <div className='main-container__lets-talk font-bold text-black flex justify-center items-center font-24 bg-white'>
-          <div>Let&apos;s talk</div>
-        </div>
+        <Link href='/about'>
+          <div className='main-container__lets-talk font-bold text-black flex justify-center items-center font-24'>
+            <div>Let&apos;s talk</div>
+          </div>
+        </Link>
       </div>
-      <h1 className='font-72 font-extrabold text-white mt-44 line-height-normal'>
-        Fuelling innovation, <br />
-        exceeding expectations
-      </h1>
-
-      <h2 className='font-semibold text-white mt-5 font-42 line-height-normal'>let&apos;s push boundaries together.</h2>
-    </>
+    </div>
   );
 }
