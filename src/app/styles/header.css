@@ -6,16 +6,29 @@
 
 .header-container__lets-talk {
   position: fixed;
-  width: 172px;
-  height: 40px;
-  border-radius: 3.08px 3.08px 46.194px 3.08px;
-  background: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 3.08px 3.08px 36.194px 3.08px;
+  background: #dc143c;
   line-height: normal;
-  top: 20px;
+  top: 33px;
   right: 35px;
 }
 
 .header-bg {
   background: #343434;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.07);
+}
+
+.header-option {
+  color: #a1a1a6;
+}
+
+.select-education:hover,
+.select-partner:hover,
+.select-benefits:hover,
+.select-kpi:hover,
+.select-deliverables:hover,
+.select-service:hover {
+  color: #c2c2c2;
 }

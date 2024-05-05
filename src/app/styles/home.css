@@ -18,7 +18,7 @@
   width: 320px;
 }
 
-.services-illustration {
+.service-illustration {
   width: 270px;
   height: 265px;
   border-radius: 8px 8px 120px 8px;
@@ -38,8 +38,41 @@
 }
 
 .benefits-illustration {
-  width: 287px;
-  height: 292px;
+  width: 250px;
+  height: 250px;
+}
+
+.common-service-illustration,
+.design-service-illustration,
+.development-service-illustration,
+.growth-service-illustration {
+  width: 624px;
+  height: 624px;
+}
+
+.impact-illustration {
+  width: 200px;
+  height: 708px;
+}
+
+.impact-illustration.bg-blue-3 {
+  border-radius: 4px 4px 120px 4px;
+}
+
+.impact-illustration.bg-blue-1 {
+  border-radius: 4px 4px 120px 4px;
+}
+
+.impact-illustration.bg-orange-1 {
+  border-radius: 4px 4px 120px 4px;
+}
+
+.impact-illustration.bg-purple-1 {
+  border-radius: 4px 4px 120px 4px;
+}
+
+.pink-1 {
+  color: pink;
 }
 
 .experts-thumbnail {
@@ -69,7 +102,7 @@
 }
 
 .book-slot-container > div:first-child {
-  background-color: #f66884;
+  background-color: #0540f2;
   border-radius: 0px 0px 150px 0px;
 }
 
@@ -79,15 +112,32 @@
 }
 
 .book-slot-container > div:nth-child(2) {
-  background-color: #a94cff;
+  background-color: #3733a6;
   border-radius: 150px 0px 0px 0px;
+}
+
+.book-slot-container:hover > div:first-child {
+  background-color: #154efb;
+}
+
+.book-slot-container:hover > div:last-child {
+  background-color: #ffab5c;
+}
+
+.book-slot-container:hover > div:nth-child(2) {
+  background-color: #443fc4;
 }
 
 .main-container__lets-talk {
   border-radius: 8px 8px 120px 8px;
   width: 213px;
   height: 218px;
-  animation: colors-change 30s ease-in-out 0s infinite forwards;
+  background-color: #dc143c;
+  /* animation: colors-change 30s ease-in-out 0s infinite forwards; */
+}
+
+.main-container__lets-talk:hover {
+  background-color: #9d0e2a;
 }
 
 @keyframes colors-change {
@@ -137,13 +187,15 @@
   height: 554.492px;
   border-radius: 0px 0px 194.31px 0px;
   background: #fff;
+  background-image: url("/images/card1-mask.svg");
 }
 
 .footer-container-2 {
-  width: 341.213px;
-  height: 309.693px;
+  width: 342px;
+  height: 413px;
   border-radius: 194.31px 0px 0px 0px;
   background: #fff;
+  background-image: url("/images/card2-mask.svg");
 }
 
 .form-pills {
@@ -164,6 +216,19 @@
   border-right: none;
   border-bottom: 1px solid #929292;
   background: #242424;
+}
+
+.vertical-arrow-movement {
+  animation: arrow-verticle 1s ease-in-out 0s infinite alternate;
+}
+
+@keyframes arrow-verticle {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(28px);
+  }
 }
 
 .arrow-movement {
@@ -191,8 +256,38 @@
 }
 
 .strategy-illustration {
-  border-radius: 8px 8px 120px 8px;
-  width: 322px;
+  border-radius: 8px 8px 121px 8px;
+  width: 255px;
+  height: 235px;
+}
+
+.freeConsultation-illustration {
+  border-radius: 2px 2px 26px 2px;
+  width: 250px;
+  height: 48px;
+}
+
+.design-click-illustration {
+  border-radius: 2px 2px 40px 2px;
+  width: 200px;
+  height: 64px;
+}
+
+.strategy-click-illustration {
+  border-radius: 2px 2px 40px 2px;
+  width: 308px;
+  height: 64px;
+}
+
+.growth-click-illustration {
+  border-radius: 2px 2px 40px 2px;
+  width: 187px;
+  height: 64px;
+}
+
+.develop-click-illustration {
+  border-radius: 2px 2px 40px 2px;
+  width: 213px;
   height: 64px;
 }
 
@@ -219,8 +314,16 @@
   display: block;
 }
 
+.partner-box.partner-box__icon {
+  display: none;
+}
+
+.partner-box:hover.partner-box__icon {
+  display: block;
+}
+
 .strategy-illustration:hover {
-  width: 390px;
+  /* width: 390px; */
 }
 
 .development-illustration,
@@ -249,7 +352,7 @@
   height: 625.018px;
   border-radius: 8px 8px 120px 8px;
   background-color: #ccc;
-  background-image: url('/images/kpi/mask-5.svg');
+  background-image: url("/images/kpi/mask-5.svg");
 }
 
 .kpi-content > div:nth-child(2) > div:first-child,
@@ -260,11 +363,11 @@
 }
 
 .kpi-content > div:nth-child(2) > div:first-child {
-  background-image: url('/images/kpi/mask-1.svg');
+  background-image: url("/images/kpi/mask-1.svg");
 }
 
 .kpi-content > div:nth-child(3) > div:first-child {
-  background-image: url('/images/kpi/mask-2.svg');
+  background-image: url("/images/kpi/mask-2.svg");
 }
 
 .kpi-content > div:nth-child(2) > div:last-child,
@@ -275,17 +378,29 @@
 }
 
 .kpi-content > div:nth-child(2) > div:last-child {
-  background-image: url('/images/kpi/mask-3.svg');
+  background-image: url("/images/kpi/mask-3.svg");
 }
 
 .kpi-content > div:nth-child(3) > div:last-child {
-  background-image: url('/images/kpi/mask-4.svg');
+  background-image: url("/images/kpi/mask-4.svg");
 }
 
 .partner-box {
-  width: 120.194px;
-  height: 122.758px;
-  border-radius: 3.367px 3.367px 50.508px 3.367px;
+  width: 340px;
+  height: 580px;
+  border-radius: 127px 9.367px 235px 3.367px;
+}
+
+.partner-box.bg-green-2:hover {
+  background-color: #2adeb4;
+}
+
+.partner-box.bg-red-2:hover {
+  background-color: #ff91a7;
+}
+
+.partner-box.bg-yellow-3:hover {
+  background-color: #ffe96d;
 }
 
 .services-mini-illustration {
@@ -295,39 +410,88 @@
 }
 
 .services-mini-illustration.bg-green-1 {
-  background-image: url('/images/services/mask.svg');
+  background-image: url("/images/services/mask.svg");
 }
 
 .services-mini-illustration.bg-blue-1 {
-  background-image: url('/images/services/mask-2.svg');
+  background-image: url("/images/services/mask-2.svg");
 }
 
 .services-mini-illustration.bg-purple-1 {
-  background-image: url('/images/services/mask-3.svg');
+  background-image: url("/images/services/mask-3.svg");
 }
 
 .services-mini-illustration.bg-warning-1 {
-  background-image: url('/images/services/mask-4.svg');
+  background-image: url("/images/services/mask-4.svg");
 }
 
 .benefits-illustration.bg-blue-1 {
-  border-radius: 8px 120px 8px 8px;
-  background-image: url('/images/benefits/mask-1.svg');
+  border-radius: 4px 120px 4px 4px;
+  background-image: url("/images/benefits/mask-1.svg");
+}
+
+.benefits-illustration.bg-red-1 {
+  border-radius: 120px 4px 4px 4px;
+  background-image: url("/images/benefits/mask-1.svg");
 }
 
 .benefits-illustration.bg-purple-1 {
-  border-radius: 8px 8px 8px 120px;
-  background-image: url('/images/benefits/mask-4.svg');
+  border-radius: 4px 4px 4px 120px;
+  background-image: url("/images/benefits/mask-4.svg");
 }
 
 .benefits-illustration.bg-green-1 {
-  border-radius: 8px 8px 8px 120px;
-  background-image: url('/images/benefits/mask-2.svg');
+  border-radius: 4px 4px 120px 4px;
+  background-image: url("/images/benefits/mask-2.svg");
 }
 
 .benefits-illustration.bg-yellow-1 {
-  border-radius: 8px 120px 8px 8px;
-  background-image: url('/images/benefits/mask-3.svg');
+  border-radius: 4px 4px 4px 120px;
+  background-image: url("/images/benefits/mask-3.svg");
+}
+
+.common-service-illustration.bg-blue-4 {
+  border-radius: 8px 8px 280px 8px;
+  /* background-image: url("/images/benefits/mask-1.svg"); */
+  background-image: url("/images/services/strategy/mask-bg-1.svg");
+  background-repeat: no-repeat;
+}
+
+.common-service-illustration.bg-green-1 {
+  border-radius: 8px 8px 280px 8px;
+  /* background-image: url("/images/benefits/mask-1.svg"); */
+  background-image: url("/images/services/strategy/mask-bg-2.svg");
+  background-repeat: no-repeat;
+}
+
+.design-service-illustration.bg-blue-4 {
+  border-radius: 8px 8px 280px 8px;
+  background-image: url("/images/services/design/mask-bg-3.svg");
+  background-repeat: no-repeat;
+}
+
+.design-service-illustration.bg-green-1 {
+  border-radius: 8px 8px 280px 8px;
+  background-image: url("/images/services/design/mask-bg-4.svg");
+  background-repeat: no-repeat;
+}
+
+.design-service-illustration.bg-yellow-1 {
+  border-radius: 8px 8px 280px 8px;
+  background-image: url("/images/services/design/mask-bg-5.svg");
+  background-repeat: no-repeat;
+}
+
+.development-service-illustration.bg-yellow-1 {
+  border-radius: 8px 8px 280px 8px;
+  background-image: url("/images/services/development/mask-bg-6.svg");
+  background-repeat: no-repeat;
+}
+
+.growth-service-illustration.bg-yellow-1 {
+  border-radius: 8px 8px 280px 8px;
+  background-image: url("/images/services/growth/mask-bg-7.svg");
+  background-repeat: no-repeat;
 }
 
 .w-30 {
@@ -336,7 +500,7 @@
 
 .workshop {
   border-radius: 0px 0px 150px 0px;
-  background-image: url('/images/partner/mask-2.svg');
+  background-image: url("/images/partner/mask-2.svg");
   padding-left: 170px;
   padding-right: 70px;
   padding-bottom: 128px;
@@ -449,7 +613,7 @@
 }
 
 .strategy-points > div:first-child:hover {
-  background-image: url('/images/services/strategy/mask.svg');
+  background-image: url("/images/services/strategy/mask.svg");
   background-repeat: no-repeat;
 }
 
@@ -474,21 +638,61 @@
 }
 
 .strategy-points > div:last-child:hover {
-  background-image: url('/images/services/strategy/mask-2.svg');
+  background-image: url("/images/services/strategy/mask-2.svg");
   background-repeat: no-repeat;
 }
 
 .design-points > div:nth-child(1):hover {
-  background-image: url('/images/services/design/mask.svg');
+  background-image: url("/images/services/design/mask.svg");
   background-repeat: no-repeat;
 }
 
 .design-points > div:nth-child(3):hover {
-  background-image: url('/images/services/design/mask-1.svg');
+  background-image: url("/images/services/design/mask-1.svg");
   background-repeat: no-repeat;
 }
 
 .design-points > div:nth-child(5):hover {
-  background-image: url('/images/services/design/mask-2.svg');
+  background-image: url("/images/services/design/mask-2.svg");
   background-repeat: no-repeat;
+}
+
+.text-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+  transform-origin: bottom;
+}
+
+/* popup styles */
+/* styles.css or any other CSS file */
+.full-screen-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  z-index: 9999; /* Ensure the popup appears on top of other content */
+  display: flex;
+  justify-content: center; /* horizontally center the content */
+  align-items: center; /* vertically center the content */
+}
+
+.popup-inner {
+  /* Add any additional styles for the inner content */
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  /* Add any additional styles for the close button */
+}
+
+.services-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth; /* Smooth scrolling behavior */
+  transition: scroll-behavior 0.5s ease-in-out; /* Transition effect for smooth scrolling */
 }

@@ -1,203 +1,179 @@
 "use client";
-import React, { useContext, useEffect, useRef, useState } from "react";
-import Strategy from "./strategy";
-import Design from "./design";
-import Development from "./development";
-import Growth from "./growth";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
-import { Context } from "@/app/page";
+import ServicesTemplate from "../../services";
 
 export default function Services() {
   const headingRef = useRef();
-  const { showHeader } = useContext(Context);
-  const [show, setShow] = useState(false);
-  const [active, setActive] = useState({ strategy: false, design: false, development: false, growth: false });
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.boundingClientRect.bottom < 0) {
-            setShow(true);
-          } else {
-            setShow(false);
-          }
-        });
-      },
-      { rootMargin: "0px" }
-    );
-    observer.observe(headingRef.current);
 
-    const selectors = document.querySelectorAll(".services-description");
-    selectors.forEach((selector) => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("height-auto", "mt-6");
-              observer.disconnect();
-            }
-          });
-        },
-        { rootMargin: "-200px" }
-      );
-      observer.observe(selector);
-    });
-    const headings = document.querySelectorAll(".services-heading");
-    headings.forEach((selector) => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.childNodes[0].classList.add("mb-7");
-              entry.target.childNodes[2].classList.add("mt-12", "py-5");
-              entry.target.classList.add("expanded", "pt-14");
-              observer.disconnect();
-            }
-          });
-        },
-        { rootMargin: "-200px" }
-      );
-      observer.observe(selector);
-    });
+  //start
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedServiceId, setSelectedServiceId] = useState(null);
 
-    const strategy = document.getElementById("strategy");
-    const observer2 = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setActive((prevstate) => ({ ...prevstate, strategy: entry.isIntersecting }));
-        });
-      },
-      { rootMargin: "-135px" }
-    );
-    observer2.observe(strategy);
-    const design = document.getElementById("design");
-    const observer3 = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setActive((prevstate) => ({ ...prevstate, design: entry.isIntersecting }));
-        });
-      },
-      { rootMargin: "-135px" }
-    );
-    observer3.observe(design);
-    const dev = document.getElementById("dev");
-    const observer4 = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setActive((prevstate) => ({ ...prevstate, development: entry.isIntersecting }));
-        });
-      },
-      { rootMargin: "-135px" }
-    );
-    observer4.observe(dev);
-    const grow = document.getElementById("grow");
-    const observer5 = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setActive((prevstate) => ({ ...prevstate, growth: entry.isIntersecting }));
-        });
-      },
-      { rootMargin: "-135px" }
-    );
-    observer5.observe(grow);
-  }, []);
+  const handleServiceClick = (serviceId) => {
+    setShowPopup(true);
+    setSelectedServiceId(serviceId);
+    document.body.style.overflow = "hidden";
+    debugger;
+    console.log("Service link clicked for:", serviceId);
+    // Scroll to the corresponding section
+    const section = document.getElementById(serviceId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Close the popup if it's open
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+
+    setSelectedServiceId(null); // Reset selected service ID
+    document.body.style.overflow = "auto";
+  };
+  //end
+
   return (
     <>
-      <div className="flex mt-80" ref={headingRef}>
+      <div className="flex mt-60 ml-34" ref={headingRef}>
         <div>
           <h1 className="font-72 font-extrabold text-white line-height-normal">
             Fuelling innovation, <br />
             exceeding expectations
           </h1>
-          <h2 className="font-semibold text-white mt-5 font-42 line-height-normal">let&apos;s push boundaries together.</h2>
-        </div>
-        <div className="ml-52">
-          <div className="flex mb-5">
-            <div className="bg-green-1 services-mini-illustration mr-8 pl-4 pt-5">
-              <Image src="/images/services/strategy/illustration-mini.svg" height={42} width={40} alt="chess" />
-              <div className="mt-4 black-1">Strategy</div>
-            </div>
-            <div className="bg-blue-1 services-mini-illustration pl-4 pt-5">
-              <Image src="/images/services/design/design.svg" height={42} width={43} alt="pen" />
-              <div className="mt-4">Design</div>
-            </div>
-          </div>
-          <div className="flex">
-            <div className="bg-purple-1 services-mini-illustration mr-8 pl-4 pt-3">
-              <Image src="/images/services/development/illustration.svg" height={46} width={40} alt="chess" />
-              <div className="mt-4">Development</div>
-            </div>
-            <div className="bg-warning-1 services-mini-illustration pl-4 pt-3">
-              <Image src="/images/services/growth/illustration-mini.svg" height={46} width={34} alt="pen" />
-              <div className="mt-4 black-1">Growth</div>
-            </div>
-          </div>
+          <h2 className="font-semibold text-white mt-5 font-42 line-height-normal">
+            let&apos;s push boundaries
+            <br /> together.
+          </h2>
         </div>
       </div>
 
-      <div className="mt-24 services">
-        <div className={`${showHeader ? "top-20" : "top-0"} sticky mb-16 bg-black-3 z-10`}>
-          <div className="font-72 font-extrabold gray-1">
-            <span className="mr-2">Services</span>
-            <div className="sub-headings__dot inline-block" />
-          </div>
-          {show && (
-            <div className="services-sticky-view font-20 font-semibold flex items-center">
-              <div
-                className={`flex items-center bg-green-1 mr-1.5 pl-4 py-2 ${active.strategy ? "opacity-100" : "opacity-30"}`}
-                onClick={() => {
-                  document.getElementById("strategy").scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                <Image src="/images/services/strategy/illustration-mini.svg" height={32} width={31} alt="chess" />
-                <div className="black-1 ml-4">Strategy</div>
-              </div>
-              <div
-                className={`flex items-center bg-blue-1 pl-8 py-2 mr-4 ${active.design ? "opacity-100" : "opacity-30"}`}
-                onClick={() => {
-                  document.getElementById("design").scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                <Image src="/images/services/design/design.svg" height={30} width={31} alt="pen" />
-                <div className="ml-4">Design</div>
-              </div>
-              <div
-                className={`flex items-center bg-purple-1 pl-4 py-2 mr-1.5 ${active.development ? "opacity-100" : "opacity-30"}`}
-                onClick={() => {
-                  document.getElementById("dev").scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                <Image src="/images/services/development/illustration.svg" height={30} width={26} alt="chess" />
-                <div className="ml-4">Development</div>
-              </div>
-              <div
-                className={`flex items-center bg-warning-1 pl-11 py-2 ${active.growth ? "opacity-100" : "opacity-30"}`}
-                onClick={() => {
-                  document.getElementById("grow").scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                <Image src="/images/services/growth/illustration-mini.svg" height={33} width={25} alt="pen" />
-                <div className="black-1 ml-5">Growth</div>
-              </div>
-            </div>
-          )}
-        </div>
-        <div id="strategy">
-          <Strategy />
-        </div>
-        <div className="services__separator" />
-        <div id="design">
-          <Design />
-        </div>
-        <div className="services__separator" />
-        <div id="dev">
-          <Development />
-        </div>
-        <div className="services__separator" />
-        <div id="grow">
-          <Growth />
+      <div className="mt-24 services ml-75">
+        <div className="font-36 font-extrabold ">
+          Our Services. Your Impact.
         </div>
       </div>
+      <div className="flex ml-75 mt-7">
+        <a onClick={() => handleServiceClick("strategy1")}>
+          <div className="bg-purple-1 impact-illustration flex">
+            <div className="  items-left mb-9 ml-4">
+              <div
+                className="font-96 black-1 font-semibold ml-2 text-vertical"
+                style={{ marginTop: -127, color: "white" }}
+              >
+                Strategy
+              </div>
+              <div>
+                <Image
+                  src="/images/strategy-icon.svg"
+                  height={84}
+                  width={93}
+                  alt="stars"
+                  style={{ marginTop: -207, marginLeft: 67 }}
+                />
+                <Image
+                  src="/images/strategy-arrow.svg"
+                  height={48}
+                  width={48}
+                  alt="stars"
+                  className="justify-center ml-16 mt-12"
+                  // style={{ marginLeft: -66 }}
+                />
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a onClick={() => handleServiceClick("design1")}>
+          <div className="bg-blue-1 impact-illustration ml-5">
+            <div className="flex  items-left mb-9 ml-4">
+              <div
+                className="font-96 black-1 font-semibold ml-2 text-vertical"
+                style={{ marginTop: 40, color: "white" }}
+              >
+                Design
+              </div>
+              <Image
+                src="/images/strategy-design.svg"
+                height={48}
+                width={48}
+                alt="stars"
+                style={{ marginLeft: -66, marginTop: 239 }}
+              />
+              <Image
+                src="/images/design-icon.svg"
+                height={86}
+                width={84}
+                alt="stars"
+                style={{ marginLeft: -29, marginBottom: 149 }}
+              />
+            </div>
+          </div>
+        </a>
+        <a onClick={() => handleServiceClick("development")}>
+          <div className="bg-orange-1 impact-illustration ml-5 flex ">
+            <div className=" items-left  mb-9 ml-4">
+              <div
+                className="font-96 black-1 font-semibold ml-4 text-vertical justify-center"
+                style={{ marginTop: 280, color: "white" }}
+              >
+                Dev
+              </div>
+              <div>
+                <Image
+                  src="/images/dev-icon.svg"
+                  height={84}
+                  width={86}
+                  alt="stars"
+                  style={{ marginTop: -398, marginLeft: 67 }}
+                  // style={{ marginLeft: -29, marginBottom: 149 }}
+                />
+                <Image
+                  src="/images/strategy-dev.svg"
+                  height={48}
+                  width={48}
+                  alt="stars"
+                  className="justify-center ml-16 mt-12"
+                  style={{ marginTop: 241 }}
+                />
+              </div>
+            </div>
+          </div>
+        </a>
+        <a onClick={() => handleServiceClick("growth")}>
+          <div className="bg-blue-3 impact-illustration ml-5">
+            <div className="flex  items-left mb-9 ml-4">
+              <div
+                className=" font-96 black-1 font-medium ml-2 text-vertical"
+                style={{ color: "white", marginTop: -22 }}
+              >
+                Growth
+              </div>
+              <Image
+                src="/images/strategy-growth.svg"
+                height={48}
+                width={48}
+                alt="stars"
+                style={{ marginLeft: -66, marginTop: 239 }}
+              />
+              <Image
+                src="/images/growth-icon.svg"
+                height={83}
+                width={80}
+                alt="stars"
+                style={{ marginLeft: -29, marginBottom: 149 }}
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+      {/* {showPopup && <ServicesTemplate onClose={handleClosePopup} />} */}
+      {showPopup && (
+        <ServicesTemplate
+          serviceId={selectedServiceId}
+          onClose={handleClosePopup}
+        />
+      )}
     </>
   );
 }
