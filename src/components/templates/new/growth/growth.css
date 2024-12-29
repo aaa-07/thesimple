@@ -1,0 +1,49 @@
+.growth-section {
+  padding-top: 142px;
+  padding-bottom: 118px;
+}
+
+.growth-section__card {
+  box-shadow: 0px 0px 0px 0px #ffffff;
+  width: 300px;
+  height: 128px;
+}
+
+.growth-section__card > div:nth-child(2) {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+.growth-section__card > div:nth-child(3) {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (max-width: 768px) {
+  .growth-section {
+    padding-top: 88px;
+    padding-bottom: 38px;
+  }
+
+  .growth-section__card {
+    box-shadow: 0px 0px 0px 0px #ffffff;
+    width: 50%;
+    height: 116px;
+  }
+
+  .growth-section__card > div:nth-child(2) {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 600;
+  }
+
+  .growth-section__card > div:nth-child(3) {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

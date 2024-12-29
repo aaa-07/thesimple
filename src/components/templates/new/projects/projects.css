@@ -1,0 +1,11 @@
+.projects-section {
+  padding-top: 180px;
+  padding-bottom: 228px;
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding-top: 0px;
+    padding-bottom: 70px;
+  }
+}

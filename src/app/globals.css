@@ -3,21 +3,50 @@
 @tailwind utilities;
 @import url("../app/styles/header.css");
 @import url("../app/styles/home.css");
+@import url("../components/templates/new/hero/hero.css");
+@import url("../components/templates/new/projects/projects.css");
+@import url("../components/templates/new/trust/trust.css");
+@import url("../components/templates/new/deliverables/deliverables.css");
+@import url("../components/templates/new/growth/growth.css");
+@import url("../components/templates/new/footer/footer.css");
+@import url("../components/templates/new/services/services.css");
+@import url("../components/templates/new/testimonials/testimonials.css");
 
 :root {
-  --background-main: #242424;
+  --background-main: #f3f3fa;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --font-urbanist: var(--font-urbanist);
+  --font-allura: var(--font-allura);
+  --font-roboto: var(--font-roboto);
+  --font-inter: var(--font-inter);
 }
 
 body {
-  color: white;
+  color: #1e1e1e;
   background-color: var(--background-main);
   line-height: normal;
+  font-family: var(--font-urbanist);
+}
+
+.font-urbanist {
+  font-family: var(--font-urbanist);
+}
+
+.font-allura {
+  font-family: var(--font-allura);
+}
+
+.font-roboto {
+  font-family: var(--font-roboto);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
 }
 
 .container {
-  max-width: 1350px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -53,6 +82,14 @@ body {
   color: #c2c2c2;
 }
 
+.gray-9 {
+  color: #6a6784;
+}
+
+.gray-10 {
+  color: #5d5e67;
+}
+
 .black-1 {
   color: #272727;
 }
@@ -67,6 +104,10 @@ body {
 
 .black-3 {
   color: #120404;
+}
+
+.black-4 {
+  color: #24252c;
 }
 
 .font-84 {

@@ -1,0 +1,33 @@
+.footer-section {
+  margin-bottom: 18px;
+  width: 996px;
+  color: #949494;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.footer-section > div:nth-child(2) {
+  margin-left: 254px;
+  margin-right: 200px;
+}
+
+.footer-section > a:nth-child(3) {
+  margin-right: 42px;
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    margin-bottom: 18px;
+    margin-top: 70px;
+    color: #949494;
+  }
+
+  .footer-section > div:nth-child(2) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .footer-section > a:nth-child(3) {
+    margin-right: 0;
+  }
+}

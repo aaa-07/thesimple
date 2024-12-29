@@ -1,0 +1,29 @@
+.services-section {
+  width: 1024px;
+  padding-bottom: 220px;
+  padding-top: 230px;
+}
+
+.services-section__1 {
+  width: 378px;
+}
+
+.services-section__2 {
+  width: 604px;
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    width: 100%;
+    padding-top: 72px;
+    padding-bottom: 96px;
+  }
+
+  .services-section__1 {
+    width: 100%;
+  }
+
+  .services-section__2 {
+    width: 100%;
+  }
+}

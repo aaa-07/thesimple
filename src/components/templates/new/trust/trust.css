@@ -1,0 +1,103 @@
+.trust-section {
+  width: 1024px;
+  padding-bottom: 200px;
+}
+
+.trust-section > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 56px;
+}
+
+.trust-section > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
+  font-size: 40px;
+  line-height: 56px;
+  font-weight: 400;
+}
+
+.trust-section > div:nth-child(2) > div:nth-child(2) {
+  width: 335px;
+  margin-left: 240px;
+}
+
+.trust-section__card {
+  position: relative;
+  width: 241px;
+  height: 340px;
+  border-radius: 20px;
+  padding: 4px;
+  background-image: url("/images/home/trust/shade.png");
+  background-repeat: no-repeat;
+  background-position-y: 4px;
+  background-position-x: 4px;
+  box-shadow: 0px 8px 8px 0px #201a4703;
+  background-color: #ffffff;
+}
+
+.trust-section__card > img {
+  position: absolute;
+  right: 16px;
+  top: 20px;
+}
+
+.trust-section__card > div:nth-child(1) {
+  margin-top: 44px;
+  margin-left: 16px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: #5d3ee4;
+  margin-bottom: 4px;
+}
+
+.trust-section__card > div:nth-child(2) {
+  font-size: 13px;
+  line-height: 16px;
+  color: #5d3ee4;
+  margin-left: 16px;
+}
+
+.trust-section__card > div:nth-child(3) {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  color: #312e4a;
+  margin-top: 53px;
+  margin-bottom: 12px;
+  margin-left: 20px;
+  margin-right: 12px;
+}
+
+.trust-section__card > div:nth-child(4) {
+  font-size: 14px;
+  line-height: 22px;
+  color: #6a6784;
+  margin-bottom: 32px;
+  margin-left: 20px;
+  margin-right: 16px;
+}
+
+@media (max-width: 768px) {
+  .trust-section {
+    width: 100%;
+    padding-bottom: 71px;
+    padding-top: 80px;
+  }
+
+  .trust-section > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 40px;
+  }
+
+  .trust-section > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+
+  .trust-section > div:nth-child(2) > div:nth-child(2) {
+    width: 307px;
+    margin-left: 0px;
+  }
+}
