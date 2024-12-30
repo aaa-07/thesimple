@@ -1,0 +1,30 @@
+<svg width="1440" height="2421" viewBox="0 0 1440 2421" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g filter="url(#filter0_i_46_19342)">
+<mask id="path-1-inside-1_46_19342" fill="white">
+<path d="M0 37H1440V2336H0V37Z"/>
+</mask>
+<path d="M0 37H1440V2336H0V37Z" fill="#F6F6FD"/>
+<path d="M0 37H1440V2336H0V37Z" fill="url(#pattern0_46_19342)" fill-opacity="0.03"/>
+<path d="M0 38H1440V36H0V38Z" fill="#D6D6E9" mask="url(#path-1-inside-1_46_19342)"/>
+</g>
+<path d="M208 0V2421" stroke="#3B3B3B" stroke-opacity="0.07"/>
+<path d="M720 0V2421" stroke="#3B3B3B" stroke-opacity="0.07"/>
+<path d="M464 0V2421" stroke="#3B3B3B" stroke-opacity="0.07"/>
+<path d="M976 0V2421" stroke="#3B3B3B" stroke-opacity="0.07"/>
+<path d="M1232 0V2421" stroke="#3B3B3B" stroke-opacity="0.07"/>
+<defs>
+<filter id="filter0_i_46_19342" x="0" y="37" width="1440" height="2299" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_46_19342"/>
+</filter>
+<pattern id="pattern0_46_19342" patternContentUnits="objectBoundingBox" width="0.00416667" height="0.00260983">
+<use xlink:href="#image0_46_19342" transform="scale(0.000694444 0.000434972)"/>
+</pattern>
+<image id="image0_46_19342" width="6" height="6" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAAXNSR0IArs4c6QAAACxJREFUGFdjZMAC+BkY/jOii4MEPzIwMKJIwARBiuESyIJwCXRBsAQ2QZAEAPnqCxVHn7cxAAAAAElFTkSuQmCC"/>
+</defs>
+</svg>
