@@ -29,9 +29,10 @@ export default function ProjectsSection() {
 
   return (
     <div className="container projects-section">
-      <div className="w-full overflow-hidden">
+      <div className="w-full overflow-hidden relative">
+        <div></div>
         <div
-          className="relative flex md:gap-x-5 gap-x-4"
+          className="flex md:gap-x-5 gap-x-4"
           style={{
             transform: `translateX(-${scrollPosition}px)`,
             // Double the images to create seamless loop
@@ -60,6 +61,7 @@ export default function ProjectsSection() {
           <Image src="/images/home/projects/9.png" alt="9" height={isMobile ? 356 : 746} width={isMobile ? 475 : 995} />
           <Image src="/images/home/projects/10.png" alt="10" height={isMobile ? 356 : 746} width={isMobile ? 475 : 995} />
         </div>
+        <div></div>
       </div>
     </div>
   );

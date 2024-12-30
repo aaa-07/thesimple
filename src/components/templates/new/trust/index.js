@@ -68,7 +68,7 @@ export default function TrustSection() {
           </div>
           <div className="text-sm md:text-lg leading-6 md:self-center">Our designs make users feel valued right away, turning first impressions into lasting relationships.</div>
         </div>
-        <div className="flex md:flex-wrap overflow-auto md:gap-5 gap-3">
+        <div className="flex md:flex-wrap overflow-auto md:gap-5 gap-3 hide-scroll">
           {TRUST_DATA.map((data, index) => (
             <div key={index}>
               <div className="trust-section__card">

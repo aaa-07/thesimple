@@ -58,6 +58,103 @@
   color: #c2c2c2;
 }
 
+.header__play-container {
+  height: 40px;
+  width: 40px;
+  background-color: #f2f2f2;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.header__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header__figma {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 300%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header__play-container:hover .header__play {
+  transform: translate(-50%, -300%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header__play-container:hover .header__figma {
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header__play-container:hover {
+  background-color: #ffe8d2;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.header__online-container {
+  height: 40px;
+  width: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.header__hi {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header__online-container:hover .header__hi {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header__open-for-work {
+  width: 104px;
+  height: 24px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 13.2px;
+  padding: 5.5px 16px;
+  border-radius: 56px;
+  background-color: #24252c;
+  opacity: 0;
+  position: absolute;
+  bottom: -25px;
+  left: -25px;
+}
+
+.header__see-our-works {
+  width: 102px;
+  height: 24px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 13.2px;
+  padding: 5.5px 16px;
+  border-radius: 56px;
+  background-color: #24252c;
+  opacity: 0;
+  position: absolute;
+  bottom: -25px;
+  left: -30px;
+}
+
+.header__play-container:hover + .header__see-our-works,
+.header__online-container:hover + .header__open-for-work {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
 @media (max-width: 768px) {
   .header-bg {
     border-radius: 56px;
@@ -91,5 +188,15 @@
   .header__work-with-us:hover :nth-child(2) :nth-child(2) {
     transform: translateX(22px);
     transition: transform 0.3s ease-in-out;
+  }
+
+  .header__play {
+    width: 8px;
+    height: 10px;
+  }
+
+  .header__play-container {
+    height: 28px;
+    width: 28px;
   }
 }

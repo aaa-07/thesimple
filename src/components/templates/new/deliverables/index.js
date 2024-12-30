@@ -143,7 +143,7 @@ export default function Deliverables() {
 
   useEffect(() => {
     if (!isMobile) return;
-    const scrollSpeed = 0.4; // Pixels per frame
+    const scrollSpeed = 0.1; // Pixels per frame
     const animationFrame = requestAnimationFrame(function scroll() {
       setScrollPosition((prev) => {
         const newPosition = prev + scrollSpeed;

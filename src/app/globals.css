@@ -11,6 +11,8 @@
 @import url("../components/templates/new/footer/footer.css");
 @import url("../components/templates/new/services/services.css");
 @import url("../components/templates/new/testimonials/testimonials.css");
+@import url("../components/templates/new/book/book.css");
+@import url("../components/templates/work/projects/projects.css");
 
 :root {
   --background-main: #f3f3fa;
@@ -332,4 +334,8 @@ body {
 
 .bg-red-2 {
   background-color: #eed0cc;
+}
+
+.hide-scroll {
+  scrollbar-width: none;
 }

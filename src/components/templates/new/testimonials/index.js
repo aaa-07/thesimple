@@ -45,7 +45,7 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <div className="container flex justify-center">
+    <div className="container flex justify-center" id="testimonials">
       <div className="testimonials-section">
         <div className="md:text-xl text-base leading-8 text-center">What they say about us</div>
         <div className="md:my-4 md:leading-12 text-center my-1">

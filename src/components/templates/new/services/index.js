@@ -72,7 +72,7 @@ export default function ServicesSection() {
   }, [nextSlide]);
 
   return (
-    <>
+    <div id="services" className="services-section__shade">
       <div className="container md:flex justify-center hidden">
         <div className="services-section">
           <div className="md:flex md:gap-x-9">
@@ -80,7 +80,7 @@ export default function ServicesSection() {
               <div className="font-medium text-3xl leading-10">Fuelling innovation, </div>
               <div className="font-allura text-3xl leading-10">exceeding expectations</div>
               <div className="mt-6 font-roboto">Let's push boundaries together.</div>
-              <div className="overflow-hidden mt-12 sticky top-36" style={{ width: "224px" }}>
+              <div className="overflow-hidden mt-40 sticky top-36" style={{ width: "224px" }}>
                 <div className="flex transition-transform duration-500 ease-out" style={{ width: "672px", transform: `translateX(-${slide * 224}px)` }}>
                   {STARTEGIC_DATA_METRICS.map((elm, index) => (
                     <div className="w-56 shrink-0" key={index}>
@@ -114,7 +114,7 @@ export default function ServicesSection() {
           </div>
           <div className="md:flex md:gap-x-9 md:my-44">
             <div className="services-section__1">
-              <div className="overflow-hidden sticky top-36" style={{ width: "224px" }}>
+              <div className="overflow-hidden sticky top-36 mt-40" style={{ width: "224px" }}>
                 <div className="flex transition-transform duration-500 ease-out" style={{ width: "672px", transform: `translateX(-${slide * 224}px)` }}>
                   {DESIGN_DATA_METRICS.map((elm, index) => (
                     <div className="w-56 shrink-0" key={index}>
@@ -148,7 +148,7 @@ export default function ServicesSection() {
           </div>
           <div className="md:flex md:gap-x-9">
             <div className="services-section__1">
-              <div className="overflow-hidden sticky top-36" style={{ width: "240px" }}>
+              <div className="overflow-hidden sticky top-36 mt-40" style={{ width: "240px" }}>
                 <div className="flex transition-transform duration-500 ease-out" style={{ width: "720px", transform: `translateX(-${slide * 240}px)` }}>
                   {DEVELOPMENT_DATA_METRICS.map((elm, index) => (
                     <div className="w-60 shrink-0" key={index}>
@@ -196,7 +196,7 @@ export default function ServicesSection() {
               Your voice, your face, your story - Your product deserves a brand that stands out. We create identities that captivate investors and outshine competitors, from
               impactful pitch decks to scalable brand systems that drive your growth.
             </div>
-            <div className="flex gap-x-6 overflow-auto">
+            <div className="flex gap-x-6 overflow-auto hide-scroll">
               {STARTEGIC_DATA_METRICS.map((elm, index) => (
                 <div className="w-56 shrink-0" key={index}>
                   <div>
@@ -212,20 +212,20 @@ export default function ServicesSection() {
               {STARTEGIC_DATA.map((elm, index) => (
                 <div className="leading-5 text-sm font-inter font-medium mb-5" style={{ color: "#24252C" }} key={index}>
                   <span>|</span>
-                  <span className="ml-6">{elm}</span>
+                  <span className="ml-3">{elm}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="mt-16 px-5">
+          <div className="md:mt-16 mt-20 px-5">
             <img src="/images/home/services/2.svg" alt="2" height={48} width={48} />
             <div className="mt-4 mb-2 text-xl leading-10 font-bold">Product Design</div>
             <div className="font-inter text-sm leading-5 mb-10" style={{ color: "#6A6784" }}>
               We design products that thrive. Slick user interfaces and cutting-edge functionality are not the only aspects of our product design process. As we dig further, we
               reveal the human experience at the core of your product that drive adoption, retention, and growth.
             </div>
-            <div className="flex gap-x-6 overflow-auto">
+            <div className="flex gap-x-6 overflow-auto hide-scroll">
               {DESIGN_DATA_METRICS.map((elm, index) => (
                 <div className="w-56 shrink-0" key={index}>
                   <div>
@@ -241,20 +241,20 @@ export default function ServicesSection() {
               {DESIGN_DATA.map((elm, index) => (
                 <div className="mb-5 leading-5 text-sm font-inter font-medium" style={{ color: "#24252C" }} key={index}>
                   <span>|</span>
-                  <span className="ml-6">{elm}</span>
+                  <span className="ml-3">{elm}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="mt-16 px-5">
+          <div className="md:mt-16 mt-20 px-5">
             <img src="/images/home/services/3.svg" alt="3" height={48} width={48} />
             <div className="mt-4 mb-2 text-xl leading-10 font-bold">Development</div>
             <div className="font-inter text-sm leading-5 mb-10" style={{ color: "#6A6784" }}>
               We don't just code, we craft. Our development team translates stunning designs into seamless, interactive experiences that users adore. Our team converts creative
               vision into a functional, flawless reality.
             </div>
-            <div className="flex gap-x-6 overflow-auto">
+            <div className="flex gap-x-6 overflow-auto hide-scroll">
               {DEVELOPMENT_DATA_METRICS.map((elm, index) => (
                 <div className="w-60 shrink-0" key={index}>
                   <div>
@@ -270,13 +270,13 @@ export default function ServicesSection() {
               {DEVELOPMENT_DATA.map((elm, index) => (
                 <div className="mb-5 leading-5 text-sm font-inter font-medium" style={{ color: "#24252C" }} key={index}>
                   <span>|</span>
-                  <span className="ml-6">{elm}</span>
+                  <span className="ml-3">{elm}</span>
                 </div>
               ))}
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

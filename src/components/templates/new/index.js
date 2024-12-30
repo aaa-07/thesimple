@@ -7,6 +7,7 @@ import GrowthSection from "./growth";
 import Footer from "./footer";
 import ServicesSection from "./services";
 import TestimonialsSection from "./testimonials";
+import BookingSection from "./book";
 
 export default function NewHomeTemplate() {
   return (
@@ -31,9 +32,10 @@ export default function NewHomeTemplate() {
       <ServicesSection />
       <TestimonialsSection />
       <GrowthSection />
-      <iframe width="100%" height="750px" src="https://booking.thesimple.design/portal-embed#/255151000000036016" frameborder="0" allowfullscreen="">
+      {/* <iframe width="100%" height="750px" src="https://thesimple.zohobookings.in/portal-embed#/255151000000036016" frameborder="0" allowfullscreen="">
         {" "}
-      </iframe>
+      </iframe> */}
+      <BookingSection />
       <div className="md:flex hidden flex-col justify-center md:mt-9 md:mb-7">
         <img src="/images/home/line.png" alt="heart" />
         <div className="flex justify-center py-4" style={{ color: "#949494" }}>

@@ -3,6 +3,30 @@
   padding-bottom: 228px;
 }
 
+@media (min-width: 768px) {
+  .projects-section > div:nth-child(1) > :first-child {
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(90deg, #f2f2f9 60%, rgba(242, 242, 249, 0) 100%);
+    width: 180px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .projects-section > div:nth-child(1) > :last-child {
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(270deg, #f2f2f9 60%, rgba(242, 242, 249, 0) 100%);
+    width: 180px;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .projects-section {
     padding-top: 0px;

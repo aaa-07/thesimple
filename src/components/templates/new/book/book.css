@@ -1,0 +1,123 @@
+.booking-section {
+  padding-top: 223px;
+  padding-bottom: 217px;
+}
+
+.booking-shade {
+  background-image: url("/images/home/book/shade.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -150px;
+}
+
+.booking-section__container {
+  height: 405px;
+  width: 966px;
+  padding: 64px 208px 57px 72px;
+  background-image: url("/images/home/book/booking-section-bg.png");
+}
+
+.booking-section__container > div:nth-child(1) {
+  width: 444px;
+}
+
+.booking-section__container > div:nth-child(2) {
+  padding-top: 68px;
+}
+
+.booking-section__container > div:nth-child(1) > :nth-child(1) {
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.booking__schedule {
+  width: 185px;
+  height: 36px;
+  background-color: #f1f2fd;
+  color: #312e4a;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.booking__schedule :nth-child(2) :nth-child(1) {
+  position: absolute;
+  transform: translateX(-38px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.booking__schedule :nth-child(2) :nth-child(2) {
+  position: absolute;
+  transform: translateX(-8px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.booking__schedule {
+  box-shadow: none;
+  transition: transform 1s ease-in-out;
+}
+
+.booking__schedule:hover {
+  transition: transform 1s ease-in-out;
+  box-shadow: 0px 0px 0px 6px #bebdd314;
+}
+
+.booking__schedule:hover :nth-child(2) :nth-child(1) {
+  transform: translateX(-8px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.booking__schedule:hover :nth-child(2) :nth-child(2) {
+  transform: translateX(22px);
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .booking-section {
+    padding-top: 158px;
+    padding-bottom: 160px;
+  }
+
+  .booking-section__container {
+    height: 594px;
+    width: 353px;
+    padding: 64px 20px 46px 20px;
+    background-image: url("/images/home/book/booking-section-bg-m.png");
+  }
+
+  .booking-section__container > div:nth-child(1) > :nth-child(1) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .booking-section__container > div:nth-child(1) {
+    width: auto;
+  }
+
+  .booking-section__container > div:nth-child(2) {
+    padding-top: 117px;
+  }
+
+  .booking-shade {
+    background-image: url("/images/home/book/shade-m.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+  }
+
+  .booking-section__container > div:nth-child(1) > :nth-child(1) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .booking__schedule {
+    width: 315px;
+    height: 48px;
+    padding: 14px 70px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    box-shadow: 0px 0px 0px 6px #bebdd314;
+  }
+}
