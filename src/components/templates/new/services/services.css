@@ -15,7 +15,6 @@
 .services-section__shade {
   background-image: url("/images/home/services/shade.svg");
   background-position-y: -40px;
-  background-repeat: no-repeat;
 }
 
 @media (max-width: 768px) {
