@@ -8,10 +8,10 @@
     position: absolute;
     height: 100%;
     background: linear-gradient(90deg, #f2f2f9 60%, rgba(242, 242, 249, 0) 100%);
-    width: 180px;
+    width: 380px;
     z-index: 1;
     top: 0;
-    left: 0;
+    left: -200px;
     bottom: 0;
   }
 
@@ -19,10 +19,10 @@
     position: absolute;
     height: 100%;
     background: linear-gradient(270deg, #f2f2f9 60%, rgba(242, 242, 249, 0) 100%);
-    width: 180px;
+    width: 380px;
     z-index: 1;
     top: 0;
-    right: 0;
+    right: -200px;
     bottom: 0;
   }
 }
