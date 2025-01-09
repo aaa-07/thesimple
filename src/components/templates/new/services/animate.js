@@ -94,7 +94,7 @@ export default function Animate() {
               exceeding expectations
             </div>
             <div
-              className="animate-container__third font-roboto gray-9"
+              className="animate-container__third font-roboto"
               style={{
                 fontSize: `${32 * scale}px`,
                 lineHeight: `${40 * scale}px`,

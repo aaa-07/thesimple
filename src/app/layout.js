@@ -1,5 +1,6 @@
 import { Urbanist, Allura, Roboto, Inter } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
 const urbanist = Urbanist({ subsets: ["latin"], variable: "--font-urbanist" });
 const allura = Allura({ subsets: ["latin"], weight: "400", variable: "--font-allura" });

@@ -16,7 +16,7 @@
   line-height: 24px;
 }
 
-.hero-section > div:nth-child(2) {
+.hero-section > :nth-child(2) {
   width: 810px;
   text-align: center;
   font-size: 44px;
