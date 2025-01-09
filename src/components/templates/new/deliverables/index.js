@@ -139,27 +139,27 @@ const DATA = [
 
 export default function Deliverables() {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [toggleBackground, setToggleBackground] = useState(false);
+  const [toggleBackground, setToggleBackground] = useState(true);
   const isMobile = useIsMobile();
   const ref = useRef();
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setToggleBackground(entry.isIntersecting);
-            observer.disconnect();
-          }
-        });
-      },
-      { rootMargin: "0px", threshold: 0.3 }
-    );
-    observer.observe(ref.current);
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           setToggleBackground(entry.isIntersecting);
+  //           observer.disconnect();
+  //         }
+  //       });
+  //     },
+  //     { rootMargin: "0px", threshold: 0.3 }
+  //   );
+  //   observer.observe(ref.current);
+  //   return () => {
+  //     observer.disconnect();
+  //   };
+  // }, []);
 
   useEffect(() => {
     if (!isMobile) return;
@@ -182,7 +182,7 @@ export default function Deliverables() {
   }, [isMobile]);
 
   return (
-    <div style={{ backgroundColor: toggleBackground ? "#020202" : "#f3f3fa", color: toggleBackground ? "#f3f3fa" : "#020202", transition: "all 1s ease-out" }} ref={ref}>
+    <div style={{ backgroundColor: toggleBackground ? "#020202" : "#f3f3fa", color: toggleBackground ? "#f3f3fa" : "#020202", transition: "all 1.5s ease-in-out" }} ref={ref}>
       <div className="container flex justify-center">
         <div className="deliverables-section">
           <div>Our deliverables</div>
