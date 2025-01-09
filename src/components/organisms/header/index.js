@@ -45,7 +45,7 @@ export default function Header({ isDeliverablesVisible }) {
             </div>
             <div className="header__see-our-works">See our works</div>
           </div>
-          <button className="md:ml-3 ml-2 flex md:text-base text-xs md:leading-5 leading-tight font-semibold md:px-4 md:py-2 p-2 header__work-with-us">
+          <button className="md:ml-3 ml-2 flex items-center md:text-base text-xs md:leading-5 leading-tight font-semibold md:px-4 md:py-2 p-2 header__work-with-us">
             <div>
               <a href="https://thesimple.zohobookings.in/#/255151000000036016" target="_blank" rel="noreferrer">
                 work with us
