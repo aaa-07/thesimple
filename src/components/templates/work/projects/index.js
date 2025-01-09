@@ -4,11 +4,10 @@ import { useIsMobile } from "@/hoc/isMobile";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const clientHeight = window.innerHeight;
-
 export default function ProjectsSection() {
   const isMobile = useIsMobile();
   const [scrollPercent, setScrollPercent] = useState(0);
+  const clientHeight = window.innerHeight;
 
   useEffect(() => {
     const handleScroll = () => {
