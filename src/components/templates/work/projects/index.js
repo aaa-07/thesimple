@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 export default function ProjectsSection() {
   const isMobile = useIsMobile();
   const [scrollPercent, setScrollPercent] = useState(0);
-  const clientHeight = window.innerHeight;
+  const [clientHeight, setClientHeight] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +16,7 @@ export default function ProjectsSection() {
       const scrollHeight = doc.scrollHeight;
       const scrollTop = doc.scrollTop;
       const percent = scrollTop / (scrollHeight - height);
+      setClientHeight(Math.max(330, height));
       setScrollPercent(percent);
     };
     handleScroll();
