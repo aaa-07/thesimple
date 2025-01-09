@@ -9,7 +9,7 @@ export default function ProjectsSection() {
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    const scrollSpeed = 0.4; // Pixels per frame
+    const scrollSpeed = 0.6; // Pixels per frame
     const animationFrame = requestAnimationFrame(function scroll() {
       setScrollPosition((prev) => {
         const newPosition = prev + scrollSpeed;

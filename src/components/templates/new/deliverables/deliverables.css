@@ -1,9 +1,7 @@
 .deliverables-section {
-  color: #f3f3fa;
   width: 1024px;
   padding-bottom: 136px;
   padding-top: 98px;
-  background-color: #020202;
 }
 
 .deliverables-section > div:nth-child(1) {
@@ -38,11 +36,9 @@
 
 @media (max-width: 768px) {
   .deliverables-section {
-    color: #f3f3fa;
     width: 100%;
     padding-bottom: 78px;
     padding-top: 47px;
-    background-color: #020202;
     padding-left: 24px;
     padding-right: 24px;
   }

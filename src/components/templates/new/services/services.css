@@ -1,7 +1,6 @@
 .services-section {
   width: 1024px;
   padding-bottom: 220px;
-  padding-top: 230px;
 }
 
 .services-section__1 {
@@ -12,9 +11,86 @@
   width: 604px;
 }
 
+.services-section__fadeIn {
+  animation-name: fadeIn;
+  animation-timeline: view(block);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .services-section__shade {
   background-image: url("/images/home/services/shade.svg");
   background-position-y: -40px;
+  background-repeat: no-repeat;
+  background-position-x: 20px;
+}
+
+.animate-container {
+  width: 1024px;
+  height: 200vh;
+  display: flex;
+  position: relative;
+}
+
+.animate-container > div {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  position: sticky;
+  top: 0px;
+}
+
+.animate-container__first {
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 73.68px;
+  text-align: left;
+}
+
+.animate-container__second {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 73.68px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.animate-container__third {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40.53px;
+  text-align: left;
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+
+.flight {
+  position: absolute;
+  right: 10px;
+  top: 110px;
+}
+
+.animate-container__line {
+  position: absolute;
+  bottom: 0px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(138, 138, 141, 0) 0%, #8a8a8d 100%);
+}
+
+.animate-container__plane {
+  position: absolute;
+  bottom: -12px;
 }
 
 @media (max-width: 768px) {
