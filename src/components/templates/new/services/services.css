@@ -51,27 +51,20 @@
 }
 
 .animate-container__first {
-  font-size: 72px;
   font-weight: 500;
-  line-height: 73.68px;
   text-align: left;
 }
 
 .animate-container__second {
-  font-size: 64px;
   font-weight: 400;
-  line-height: 73.68px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
 
 .animate-container__third {
-  font-size: 32px;
   font-weight: 400;
-  line-height: 40.53px;
   text-align: left;
-  padding-top: 24px;
   padding-bottom: 32px;
 }
 
