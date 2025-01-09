@@ -4,7 +4,7 @@ import { useIsMobile } from "@/hoc/isMobile";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const clientHeight = document.documentElement.clientHeight;
+const clientHeight = window.innerHeight;
 
 export default function ProjectsSection() {
   const isMobile = useIsMobile();
