@@ -34,12 +34,12 @@
 }
 
 @media screen and (max-width: 768px) {
-  .testimonials-section > div:nth-child(4) {
+  .testimonials-section > div:nth-child(5) {
     height: 765px;
     position: relative;
   }
 
-  .testimonials-section > div:nth-child(4) > div:nth-child(1) {
+  .testimonials-section > div:nth-child(5) > div:nth-child(1) {
     position: absolute;
     width: 100%;
     background: linear-gradient(180deg, #f3f3fa 0%, rgba(255, 255, 255, 0) 100%);
@@ -50,7 +50,7 @@
     right: 0;
   }
 
-  .testimonials-section > div:nth-child(4) > div:last-child {
+  .testimonials-section > div:nth-child(5) > div:last-child {
     position: absolute;
     width: 100%;
     background: linear-gradient(0deg, #f3f3fa 0%, rgba(255, 255, 255, 0) 100%);
