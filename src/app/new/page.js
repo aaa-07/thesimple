@@ -1,3 +1,4 @@
+"use client";
 import Header from "@/components/organisms/header";
 import NewHomeTemplate from "@/components/templates/new";
 
