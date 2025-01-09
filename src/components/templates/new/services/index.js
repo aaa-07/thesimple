@@ -1,5 +1,6 @@
 "use client";
 
+import classNames from "classnames";
 import { useCallback, useEffect, useState } from "react";
 
 const STARTEGIC_DATA = [
@@ -75,13 +76,20 @@ export default function ServicesSection() {
     <div id="services" className="services-section__shade">
       <div className="container md:flex justify-center hidden">
         <div className="services-section">
-          <div className="md:flex md:gap-x-9">
-            <div className="services-section__1">
-              <div className="font-medium text-3xl leading-10">Fuelling innovation, </div>
-              <div className="font-allura text-3xl leading-10">exceeding expectations</div>
-              <div className="mt-6 font-roboto">Let's push boundaries together.</div>
-              <div className="overflow-hidden mt-40 sticky top-36" style={{ width: "224px" }}>
-                <div className="flex transition-transform duration-500 ease-out" style={{ width: "672px", transform: `translateX(-${slide * 224}px)` }}>
+          {/* <div className="mb-40 services-section__fadeIn">
+            <div className="font-medium text-4xl leading-10">Fuelling innovation, </div>
+            <div className="font-allura text-4xl leading-10">exceeding expectations</div>
+            <div className="mt-6 font-roboto gray-9">
+              Let's push boundaries together. <img src="/images/home/services/plane.svg" alt="plane" className="inline ml-2" />
+            </div>
+          </div> */}
+          <div className="md:flex md:gap-x-9 services-section__fadeIn">
+            <div className="services-section__1 flex items-center">
+              <div className="overflow-hidden" style={{ width: "224px" }}>
+                <div
+                  className={classNames("flex", slide === 0 ? "" : "transition-transform duration-500 ease-out")}
+                  style={{ width: "672px", transform: `translateX(-${slide * 224}px)` }}
+                >
                   {STARTEGIC_DATA_METRICS.map((elm, index) => (
                     <div className="w-56 shrink-0" key={index}>
                       <div>
@@ -112,10 +120,13 @@ export default function ServicesSection() {
               </div>
             </div>
           </div>
-          <div className="md:flex md:gap-x-9 md:my-44">
-            <div className="services-section__1">
-              <div className="overflow-hidden sticky top-36 mt-40" style={{ width: "224px" }}>
-                <div className="flex transition-transform duration-500 ease-out" style={{ width: "672px", transform: `translateX(-${slide * 224}px)` }}>
+          <div className="md:flex md:gap-x-9 md:my-44 services-section__fadeIn">
+            <div className="services-section__1 flex items-center">
+              <div className="overflow-hidden" style={{ width: "224px" }}>
+                <div
+                  className={classNames("flex", slide === 0 ? "" : "transition-transform duration-500 ease-out")}
+                  style={{ width: "672px", transform: `translateX(-${slide * 224}px)` }}
+                >
                   {DESIGN_DATA_METRICS.map((elm, index) => (
                     <div className="w-56 shrink-0" key={index}>
                       <div>
@@ -146,10 +157,13 @@ export default function ServicesSection() {
               </div>
             </div>
           </div>
-          <div className="md:flex md:gap-x-9">
-            <div className="services-section__1">
-              <div className="overflow-hidden sticky top-36 mt-40" style={{ width: "240px" }}>
-                <div className="flex transition-transform duration-500 ease-out" style={{ width: "720px", transform: `translateX(-${slide * 240}px)` }}>
+          <div className="md:flex md:gap-x-9 services-section__fadeIn">
+            <div className="services-section__1 flex items-center">
+              <div className="overflow-hidden" style={{ width: "240px" }}>
+                <div
+                  className={classNames("flex", slide === 0 ? "" : "transition-transform duration-500 ease-out")}
+                  style={{ width: "720px", transform: `translateX(-${slide * 240}px)` }}
+                >
                   {DEVELOPMENT_DATA_METRICS.map((elm, index) => (
                     <div className="w-60 shrink-0" key={index}>
                       <div>

@@ -6,11 +6,28 @@ import { useEffect, useState } from "react";
 
 export default function ProjectsSection() {
   const isMobile = useIsMobile();
+  const [scrollPercent, setScrollPercent] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const doc = document.documentElement;
+      const height = doc.clientHeight;
+      const scrollHeight = doc.scrollHeight;
+      const scrollTop = doc.scrollTop;
+      const percent = scrollTop / (scrollHeight - height);
+      setScrollPercent(percent);
+    };
+    handleScroll();
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div>
-      <div className="md:flex flex-col items-center absolute left-24 top-0 hidden">
-        <Image src="/images/work/line.png" alt="line" width={2} height={547} />
+      <div className="md:flex flex-col items-center fixed left-24 top-0 hidden">
+        <div style={{ width: "2px", height: `max(200px, ${755 * scrollPercent}px)`, background: "linear-gradient(180deg, rgba(138, 138, 141, 0) 0%, #8A8A8D 100%)" }} />
         <Image src="/images/work/plane.svg" alt="plane" width={29} height={28} />
       </div>
       <div className="container work-section">
@@ -29,8 +46,8 @@ export default function ProjectsSection() {
           </div>
         </div>
       </div>
-      <div className="md:flex flex-col items-center absolute right-24 top-0 hidden">
-        <Image src="/images/work/line.png" alt="line" width={2} height={547} />
+      <div className="md:flex flex-col items-center fixed right-24 top-0 hidden">
+        <div style={{ width: "2px", height: `max(200px, ${755 * scrollPercent}px)`, background: "linear-gradient(180deg, rgba(138, 138, 141, 0) 0%, #8A8A8D 100%)" }} />
         <Image src="/images/work/plane.svg" alt="plane" width={29} height={28} />
       </div>
     </div>

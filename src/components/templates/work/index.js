@@ -11,11 +11,11 @@ export default function WorkTemplate() {
       <GrowthSection />
       <BookingSection />
       <div className="md:flex hidden flex-col justify-center md:mt-9 md:mb-7">
-        <img src="/images/home/line.png" alt="heart" />
+        <img src="/images/home/line.svg" alt="heart" />
         <div className="flex justify-center py-4" style={{ color: "#949494" }}>
           <img src="/images/home/heart.svg" alt="heart" className="mr-2" /> Bring flowers or a small gift to someone going through a tough time
         </div>
-        <img src="/images/home/line.png" alt="heart" />
+        <img src="/images/home/line.svg" alt="heart" />
       </div>
 
       <div className="md:hidden block">

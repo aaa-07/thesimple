@@ -1,9 +1,10 @@
 "use client";
 
+import classNames from "classnames";
 import Image from "next/image";
 import React from "react";
 
-export default function Header() {
+export default function Header({ isDeliverablesVisible }) {
   return (
     <div className="container flex justify-center">
       <div className={"header-bg fixed top-7 z-20"}>
@@ -11,7 +12,7 @@ export default function Header() {
           <div className="font-24 font-extrabold flex items-baseline">
             <Image src="/images/header/logo.svg" height={37} width={134} alt="logo" className="header__logo" />
           </div>
-          <div className="text-sm ml-52 header-option md:block hidden">
+          <div className={classNames(isDeliverablesVisible ? "text-white" : "", "text-sm ml-52 header-option md:block hidden")}>
             <span
               className="cursor-pointer mx-8 select-service"
               onClick={() => {

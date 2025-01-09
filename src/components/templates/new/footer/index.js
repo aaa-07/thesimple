@@ -16,7 +16,7 @@ export default function Footer() {
 
       <div className="footer-section md:hidden flex flex-col items-center ">
         <Image src="/images/header/logo.svg" height={37} width={134} alt="logo" className="mb-24" />
-        <img src="/images/home/line.png" alt="line" />
+        <img src="/images/home/line.svg" alt="line" />
         <div className="leading-8 text-xs py-2">
           <a href="https://www.linkedin.com/company/thesimple-inc/" target="_blank" rel="noreferrer" className="mr-14">
             Instagram
@@ -25,7 +25,7 @@ export default function Footer() {
             Linkedin
           </a>
         </div>
-        <img src="/images/home/line.png" alt="line" />
+        <img src="/images/home/line.svg" alt="line" />
         <div className="mt-4 leading-8 text-sm">All rights reserved thesimple 2024</div>
       </div>
     </div>
