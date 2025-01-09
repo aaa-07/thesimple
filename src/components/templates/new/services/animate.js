@@ -98,11 +98,12 @@ export default function Animate() {
               style={{
                 fontSize: `${32 * scale}px`,
                 lineHeight: `${40 * scale}px`,
+                paddingTop: `${24 * scale}px`,
               }}
             >
               Let's push boundaries together.
             </div>
-            <div className="flight w-max" style={{ top: `${top}px`, left: "600px", opacity: `${scale < 1 ? 0 : 1}`, transition: "opacity 0.5s ease-out" }}>
+            <div className="flight w-max" style={{ top: `${top}px`, left: "600px", opacity: `${width === 72 || scale < 1 ? 0 : 1}`, transition: "opacity 0.5s ease-out" }}>
               <img className="animate-container__img" src="/images/home/services/flight.svg" alt="flight" style={{ height: height, width: width }} />
             </div>
             <div className="animate-container__line" style={{ width: `${lineWidth}px`, opacity: `${scale < 1 ? 0 : 1}`, transition: "opacity 0.5s ease-out" }} />

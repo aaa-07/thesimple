@@ -182,7 +182,7 @@ export default function Deliverables() {
   }, [isMobile]);
 
   return (
-    <div style={{ backgroundColor: toggleBackground ? "#020202" : "#f3f3fa", color: toggleBackground ? "#f3f3fa" : "#020202", transition: "all 0.5s ease-out" }} ref={ref}>
+    <div style={{ backgroundColor: toggleBackground ? "#020202" : "#f3f3fa", color: toggleBackground ? "#f3f3fa" : "#020202", transition: "all 1s ease-out" }} ref={ref}>
       <div className="container flex justify-center">
         <div className="deliverables-section">
           <div>Our deliverables</div>

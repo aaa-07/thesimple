@@ -35,13 +35,15 @@ export default function WorkTemplate() {
       <BookingSection />
       <div className="md:flex hidden flex-col justify-center md:mt-9 md:mb-7">
         <img src="/images/home/line.svg" alt="heart" />
-        <div className="flex justify-between py-4" style={{ color: "#949494" }}>
-          <div className="flex w-1/2 pl-48">
-            {isDay ? <img src="/images/home/day.svg" alt="day" className="mr-2" /> : <img src="/images/home/night.svg" alt="night" className="mr-2" />}
-            <div>Bangalore | {time}</div>
-          </div>
-          <div className="w-1/2">
-            <img src="/images/home/heart.svg" alt="heart" className="mr-2 inline" /> {QUOTES[quoteIndex]}
+        <div className="flex justify-center py-4">
+          <div className="flex" style={{ color: "#949494", width: "980px" }}>
+            <div className="flex w-1/2">
+              {isDay ? <img src="/images/home/day.svg" alt="day" className="mr-2" /> : <img src="/images/home/night.svg" alt="night" className="mr-2" />}
+              <div>Bangalore | {time}</div>
+            </div>
+            <div className="w-1/2">
+              <img src="/images/home/heart.svg" alt="heart" className="mr-2 inline" /> {QUOTES[quoteIndex]}
+            </div>
           </div>
         </div>
         <img src="/images/home/line.svg" alt="heart" />
