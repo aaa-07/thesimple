@@ -1,5 +1,12 @@
 {
   "buildCommand": "npm run build",
   "installCommand": "npm install",
-  "outputDirectory": "client/dist"
+  "outputDirectory": "client/dist",
+  "rewrites": [
+    { "source": "/work/1", "destination": "/src/pages/orbit.html" },
+    { "source": "/work/2", "destination": "/src/pages/verity.html" },
+    { "source": "/work/3", "destination": "/src/pages/cybersecurity.html" },
+    { "source": "/work/4", "destination": "/src/pages/market_intelligence.html" },
+    { "source": "/work/5", "destination": "/src/pages/neoma.html" }
+  ]
 }
