@@ -7,6 +7,17 @@
   try {
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
+    // WebKit (Safari on macOS, and every browser on iOS/iPadOS — Apple
+    // requires them all to use WebKit) does not repaint the tab icon when a
+    // <link rel="icon"> is added/changed after page load, so this whole
+    // swap-the-link trick silently no-ops there. Bail out and leave the
+    // static favicon.png/.svg from the HTML in place rather than replacing
+    // it with a link WebKit will never actually show.
+    var ua = navigator.userAgent;
+    var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var isWebKitOnly = isIOS || (/Safari/.test(ua) && !/Chrome|CriOS|FxiOS|EdgiOS|OPiOS|Chromium|Edg\//.test(ua));
+    if (isWebKitOnly) return;
+
     var SIZE = 32;
     var VB = 120; // logical space matches the site's living-mark viewBox
     var TICK_MS = 140;
@@ -147,7 +158,12 @@
       return canvas.toDataURL('image/png');
     }
 
-    var link = document.querySelector('link[rel="icon"]');
+    // There are two static icon links in the HTML (a PNG fallback and an
+    // SVG one, for browsers without SVG-favicon support) — once the
+    // animation takes over, replace both with a single managed link so
+    // there's no ambiguity about which one the browser is showing.
+    var staticIcons = Array.prototype.slice.call(document.querySelectorAll('link[rel="icon"]'));
+    var current = null;
     var start = performance.now();
     var timer = null;
 
@@ -158,8 +174,14 @@
       next.type = 'image/png';
       next.href = drawFrame(p);
       document.head.appendChild(next);
-      if (link && link.parentNode) link.parentNode.removeChild(link);
-      link = next;
+      if (current && current.parentNode) {
+        current.parentNode.removeChild(current);
+      } else {
+        staticIcons.forEach(function (el) {
+          if (el.parentNode) el.parentNode.removeChild(el);
+        });
+      }
+      current = next;
     }
 
     function play() {

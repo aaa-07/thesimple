@@ -1,11 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 120 120" role="img" aria-label="thesimple icon">
+  <!-- "Concept B" static mark (client/reference/Static icon.html, dark theme) -->
   <defs>
-    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#fffef9"/>
-      <stop offset="1" stop-color="#ffe58a"/>
-    </linearGradient>
+    <filter id="glowDark" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
   </defs>
-  <rect width="32" height="32" rx="7" fill="#07070a"/>
-  <rect x="9" y="9" width="14" height="14" rx="3" fill="url(#core)" stroke="#F2C94C" stroke-width="1"/>
-  <path d="M19 9H23V13Z" fill="#FFE790"/>
+
+  <rect width="120" height="120" rx="26" fill="#07070a"/>
+
+  <g transform="translate(28 49) rotate(-18)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#F72555"/></g>
+  <g transform="translate(43 25) rotate(-8)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#FF7A1A"/></g>
+  <g transform="translate(71 24) rotate(4)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#FFD11A"/></g>
+  <g transform="translate(92 45) rotate(13)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#21C88A"/></g>
+  <g transform="translate(84 79) rotate(22)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#2F80ED"/></g>
+  <g transform="translate(39 88) rotate(28)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#7B4DFF"/></g>
+
+  <circle cx="60" cy="60" r="22" fill="#FFD764" opacity=".55" filter="url(#glowDark)"/>
+
+  <g>
+    <rect x="43" y="43" width="34" height="34" rx="8" fill="#FFFDF5" stroke="#F2C94C" stroke-width="2"/>
+    <path d="M68 43h9v9z" fill="#FFE790"/>
+  </g>
 </svg>

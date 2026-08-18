@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>thesimple — Concept B Static Icon</title>
+<style>
+:root{--bg:#f6f6f3;--ink:#090b12;--line:rgba(9,11,18,.10);--dark:#080b12}
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+.page{min-height:100vh;width:min(1180px,calc(100% - 40px));margin:0 auto;padding:48px 0 72px}
+h1{font-size:clamp(42px,6vw,74px);letter-spacing:-.05em;margin:0 0 10px;font-weight:520}
+.sub{color:#747983;max-width:720px;line-height:1.6;margin-bottom:36px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{border-radius:28px;border:1px solid var(--line);padding:28px;min-height:320px;display:flex;flex-direction:column;justify-content:space-between}
+.card.light{background:#fff}.card.dark{background:var(--dark);color:#fff;border-color:rgba(255,255,255,.08)}
+.label{font-size:12px;text-transform:uppercase;letter-spacing:.14em;opacity:.55;font-weight:700}
+.stage{display:grid;place-items:center;min-height:210px}
+.icon{width:150px;height:150px;display:block}.icon svg{width:100%;height:100%;display:block;overflow:visible}
+.scale-row{display:flex;align-items:end;gap:18px;flex-wrap:wrap}
+.scale{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:11px;color:#7a7f89}.dark .scale{color:#aeb4bd}
+.s24{width:24px;height:24px}.s32{width:32px;height:32px}.s48{width:48px;height:48px}.s64{width:64px;height:64px}.s96{width:96px;height:96px}
+.note{filter:drop-shadow(0 1px 1px rgba(0,0,0,.08))}
+.center-glow{fill:#FFD764;opacity:.42;filter:blur(8px)}
+.center-note{filter:drop-shadow(0 3px 8px rgba(198,145,0,.18))}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.page{width:calc(100% - 28px);padding-top:28px}}
+</style>
+</head>
+<body>
+<main class="page">
+  <h1>Concept B — static icon</h1>
+  <p class="sub">Static state for the living mark: six idea notes remain visible as a controlled system around one illuminated innovation note. No circles, no random particles, no animation dependency.</p>
+
+  <section class="grid">
+    <article class="card light">
+      <div class="label">Light theme</div>
+      <div class="stage">
+        <span class="icon">
+          <svg viewBox="0 0 120 120" role="img" aria-label="thesimple Concept B static icon">
+            <g class="note" transform="translate(28 49) rotate(-18)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#F72555"/><path d="M1.8 -6H6V-1.8Z" fill="rgba(255,255,255,.30)"/></g>
+            <g class="note" transform="translate(43 25) rotate(-8)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#FF7A1A"/><path d="M1.8 -6H6V-1.8Z" fill="rgba(255,255,255,.30)"/></g>
+            <g class="note" transform="translate(71 24) rotate(4)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#FFD11A"/><path d="M1.8 -6H6V-1.8Z" fill="rgba(255,255,255,.30)"/></g>
+            <g class="note" transform="translate(92 45) rotate(13)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#21C88A"/><path d="M1.8 -6H6V-1.8Z" fill="rgba(255,255,255,.30)"/></g>
+            <g class="note" transform="translate(84 79) rotate(22)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#2F80ED"/><path d="M1.8 -6H6V-1.8Z" fill="rgba(255,255,255,.30)"/></g>
+            <g class="note" transform="translate(39 88) rotate(28)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#7B4DFF"/><path d="M1.8 -6H6V-1.8Z" fill="rgba(255,255,255,.30)"/></g>
+            <circle class="center-glow" cx="60" cy="60" r="22"/>
+            <g class="center-note"><rect x="43" y="43" width="34" height="34" rx="8" fill="#FFFDF5" stroke="#F2C94C" stroke-width="2"/><path d="M68 43h9v9z" fill="#FFE790"/></g>
+          </svg>
+        </span>
+      </div>
+
+      <div class="scale-row">
+        <div class="scale"><span class="icon s24"><svg viewBox="0 0 120 120"><use href="#staticMark"/></svg></span><span>24</span></div>
+        <div class="scale"><span class="icon s32"><svg viewBox="0 0 120 120"><use href="#staticMark"/></svg></span><span>32</span></div>
+        <div class="scale"><span class="icon s48"><svg viewBox="0 0 120 120"><use href="#staticMark"/></svg></span><span>48</span></div>
+        <div class="scale"><span class="icon s64"><svg viewBox="0 0 120 120"><use href="#staticMark"/></svg></span><span>64</span></div>
+        <div class="scale"><span class="icon s96"><svg viewBox="0 0 120 120"><use href="#staticMark"/></svg></span><span>96</span></div>
+      </div>
+    </article>
+
+    <article class="card dark">
+      <div class="label">Dark theme</div>
+      <div class="stage">
+        <span class="icon">
+          <svg viewBox="0 0 120 120" role="img" aria-label="thesimple Concept B static icon dark">
+            <defs><filter id="glowDark" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="8"/></filter></defs>
+            <g class="note" transform="translate(28 49) rotate(-18)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#F72555"/></g>
+            <g class="note" transform="translate(43 25) rotate(-8)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#FF7A1A"/></g>
+            <g class="note" transform="translate(71 24) rotate(4)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#FFD11A"/></g>
+            <g class="note" transform="translate(92 45) rotate(13)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#21C88A"/></g>
+            <g class="note" transform="translate(84 79) rotate(22)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#2F80ED"/></g>
+            <g class="note" transform="translate(39 88) rotate(28)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#7B4DFF"/></g>
+            <circle cx="60" cy="60" r="22" fill="#FFD764" opacity=".55" filter="url(#glowDark)"/>
+            <g class="center-note"><rect x="43" y="43" width="34" height="34" rx="8" fill="#FFFDF5" stroke="#F2C94C" stroke-width="2"/><path d="M68 43h9v9z" fill="#FFE790"/></g>
+          </svg>
+        </span>
+      </div>
+      <div class="scale-row"><div class="scale"><span>Use this state on black/navy surfaces.</span></div></div>
+    </article>
+  </section>
+
+  <svg width="0" height="0" style="position:absolute">
+    <symbol id="staticMark" viewBox="0 0 120 120">
+      <g transform="translate(28 49) rotate(-18)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#F72555"/></g>
+      <g transform="translate(43 25) rotate(-8)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#FF7A1A"/></g>
+      <g transform="translate(71 24) rotate(4)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#FFD11A"/></g>
+      <g transform="translate(92 45) rotate(13)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#21C88A"/></g>
+      <g transform="translate(84 79) rotate(22)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#2F80ED"/></g>
+      <g transform="translate(39 88) rotate(28)"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#7B4DFF"/></g>
+      <circle cx="60" cy="60" r="22" fill="#FFD764" opacity=".28"/>
+      <rect x="43" y="43" width="34" height="34" rx="8" fill="#FFFDF5" stroke="#F2C94C" stroke-width="2"/>
+      <path d="M68 43h9v9z" fill="#FFE790"/>
+    </symbol>
+  </svg>
+</main>
+</body>
+</html>
