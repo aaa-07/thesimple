@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
     return res.status(400).json({ ok: false, error: 'name, email and challenge are required.' });
   }
 
-  console.log('[contact] new submission', { name, email, type, budget, challenge, receivedAt: new Date().toISOString() });
+  // console.log('[contact] new submission', { name, email, type, budget, challenge, receivedAt: new Date().toISOString() });
 
   try {
     await sendContactEmail({ name, email, type, budget, challenge });
