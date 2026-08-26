@@ -3293,6 +3293,74 @@ more information than ever.</h3><div class="caseMeta">A global enterprise intell
 </div>
 </section>
 <footer><div class="wrap"><div class="footerGrid"><div><div class="footerBrand"><img class="brandLogo" src="/assets/thesimple-logo.png" alt="thesimple"><span class="living" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><linearGradient id="footerBrandCg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffef9"/><stop offset="1" stop-color="#ffe58a"/></linearGradient><linearGradient id="footerBrandSheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="rgba(255,255,255,0)"/><stop offset=".5" stop-color="#fffdf0"/><stop offset="1" stop-color="rgba(255,255,255,0)"/></linearGradient><clipPath id="footerBrandCoreClip"><rect x="43" y="43" width="34" height="34" rx="8"/></clipPath></defs><g class="b-note" data-i="0"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#F72555"/><path d="M1.8 -6H6V-1.8Z" fill="rgba(255,255,255,.30)"/></g><g class="b-note" data-i="1"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#FF7A1A"/><path d="M1.8 -6H6V-1.8Z" fill="rgba(255,255,255,.30)"/></g><g class="b-note" data-i="2"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#FFD11A"/><path d="M1.8 -6H6V-1.8Z" fill="rgba(255,255,255,.30)"/></g><g class="b-note" data-i="3"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#21C88A"/><path d="M1.8 -6H6V-1.8Z" fill="rgba(255,255,255,.30)"/></g><g class="b-note" data-i="4"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#2F80ED"/><path d="M1.8 -6H6V-1.8Z" fill="rgba(255,255,255,.30)"/></g><g class="b-note" data-i="5"><rect x="-6" y="-6" width="12" height="12" rx="3" fill="#7B4DFF"/><path d="M1.8 -6H6V-1.8Z" fill="rgba(255,255,255,.30)"/></g><circle class="b-halo" cx="60" cy="60" r="21"/><g class="b-core"><rect x="43" y="43" width="34" height="34" rx="8" fill="url(#footerBrandCg)" stroke="#F2C94C" stroke-width="2"/><path d="M68 43h9v9z" fill="#FFE790"/><rect class="b-sheen" x="34" y="36" width="9" height="50" rx="4" fill="url(#footerBrandSheen)" clip-path="url(#footerBrandCoreClip)"/></g></svg></span></div><p style="color:rgba(255,255,255,.5);max-width:420px;line-height:1.6;font-size:13px">An independent product innovation company working from Bangalore with teams around the world.</p></div><div class="footerCol"><b>Explore</b><a href="#experience">Experience</a><a href="#work">Work</a><a href="#system">Connected system</a><a href="#lab">Open Lab</a><a href="#insights">Insights</a><a href="#care">Care</a></div><div class="footerCol"><b>Connect</b><a href="mailto:hey@thesimple.design">hey@thesimple.design</a><a href="https://www.linkedin.com/company/thesimple/" rel="noreferrer" target="_blank">LinkedIn</a><a href="tel:+919515956046">+91 95159 56046</a></div><div class="footerCol"><b>Now</b><span>Bangalore, India</span><span>Working globally</span><span id="clock">IST</span></div></div><div class="footerBottom"><span>© 2026 thesimple</span><span>Private tools by design</span><span>Made with clarity and unreasonable care</span></div></div></footer>
+<div class="modal" id="contactModal"><div class="modalBox"><button class="modalClose" data-close="">×</button><div class="sectionNo" style="color:var(--acid)">Start with the difficult part</div><h2>What should become possible?</h2><p class="modalLead">No prepared brief is required. Describe the part that is unclear, expensive, slow, fragmented or important.</p><div id="contact-flow-container">
+  
+  <!-- STEP 1: Email Input -->
+  <form id="step-1-email">
+    <div class="formGrid">
+      <div class="field full">
+        <label>Email</label>
+        <input id="clerk-email" name="email" required="" type="email" placeholder="Enter your email to verify..."/>
+      </div>
+    </div>
+    <button type="submit" class="wowBtn primary" style="margin-top:15px; width:100%">
+      <span>Verify email to continue ↗︎</span>
+    </button>
+  </form>
+
+  <!-- STEP 2: OTP Input (Hidden initially) -->
+  <form id="step-2-otp" style="display: none;">
+    <div class="formGrid">
+      <div class="field full">
+        <label>Verification Code</label>
+        <p style="font-size: 11px; color: rgba(255,255,255,0.5); margin: 0 0 10px 0;">Enter the 6-digit code sent to your email.</p>
+        <input id="clerk-otp" type="text" required=""/>
+      </div>
+    </div>
+    <button type="submit" class="wowBtn primary" style="margin-top:15px; width:100%">
+      <span>Confirm Code ↗︎</span>
+    </button>
+  </form>
+
+  <!-- STEP 3: Remaining Original Fields (Hidden initially) -->
+  <form id="step-3-details" style="display: none;">
+    <div class="formGrid">
+      <div class="field full">
+        <label>Name</label>
+        <input id="lead-name" name="name" required=""/>
+      </div>
+      <div class="field">
+        <label>Project type</label>
+        <select id="lead-type" name="type">
+          <option>New digital product</option>
+          <option>Enterprise platform</option>
+          <option>Product rescue or redesign</option>
+          <option>AI-enabled workflow</option>
+          <option>MVP design and build</option>
+          <option>Other difficult problem</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Working investment range</label>
+        <select id="lead-budget" name="budget">
+          <option>Still defining</option>
+          <option>₹10L–₹25L</option>
+          <option>₹25L–₹50L</option>
+          <option>₹50L–₹1Cr</option>
+          <option>₹1Cr+</option>
+        </select>
+      </div>
+      <div class="field full">
+        <label>The difficult part</label>
+        <textarea id="lead-challenge" name="challenge" placeholder="What is happening, why does it matter, and what has not worked yet?" required="" rows="6"></textarea>
+      </div>
+    </div>
+    <button type="submit" class="wowBtn primary" style="margin-top:15px; width: 100%;">
+      <span>Prepare project email ↗︎</span>
+    </button>
+  </form>
+
+</div>
 <div class="modal" id="contactModal"><div class="modalBox"><button class="modalClose" data-close="">×</button><div class="sectionNo" style="color:var(--acid)">Start with the difficult part</div><h2>What should become possible?</h2><p class="modalLead">No prepared brief is required. Describe the part that is unclear, expensive, slow, fragmented or important.</p><form id="contactForm"><div class="formGrid"><div class="field"><label>Name</label><input name="name" required=""/></div><div class="field"><label>Email</label><input name="email" required="" type="email"/></div><div class="field"><label>Project type</label><select name="type"><option>New digital product</option><option>Enterprise platform</option><option>Product rescue or redesign</option><option>AI-enabled workflow</option><option>MVP design and build</option><option>Other difficult problem</option></select></div><div class="field"><label>Working investment range</label><select name="budget"><option>Still defining</option><option>₹10L–₹25L</option><option>₹25L–₹50L</option><option>₹50L–₹1Cr</option><option>₹1Cr+</option></select></div><div class="field full"><label>The difficult part</label><textarea name="challenge" placeholder="What is happening, why does it matter, and what has not worked yet?" required="" rows="6"></textarea></div></div><button class="wowBtn primary" style="margin-top:15px"><span>Prepare project email ↗︎</span></button></form></div></div>
 <div class="modal" id="toolModal"><div class="modalBox" id="toolContent"></div></div>
 <div aria-hidden="true" class="pageExperience" id="carePage"><button class="pageBack" data-page-close="">← Back to thesimple</button><div class="careRoom"><canvas id="careCanvas"></canvas><div class="natureWorldV17" aria-hidden="true"><div class="natureSunV17"></div><div class="natureMountainV17 m1"></div><div class="natureMountainV17 m2"></div><div class="natureLakeV17"></div><div class="natureBranchV17 branch1"></div><div class="natureBranchV17 branch2"></div><div class="natureFirefliesV17"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="roomWindow"><div class="roomMoon"></div><div class="roomRain"></div></div><div class="roomLamp"></div><div class="roomChair"></div><div class="roomContent"><span class="mono">A HUMAN ROOM</span><h1>Keep a little<br/>of what matters.</h1><p>A private, nature-led corner of the site for memory and stillness. Nothing leaves this browser. No productivity score. No transaction. Just something human.</p><div class="roomChoices"><button data-room="memory"><b>Keep a good memory</b><span>Write a moment worth keeping. It becomes a floating light in your private memory sky.</span></button><button data-room="breathe"><b>Sit for one minute</b><span>Choose a landscape, then spend sixty seconds with its rhythm.</span></button></div><div class="roomPanel" id="roomPanel"><div class="roomWelcome"><b>Your quiet corner is ready.</b><p>Keep a memory or choose a one-minute nature pause. Everything stays on this device.</p></div></div><div class="careConstellation memorySkyV17" id="careConstellation"></div></div></div></div>
@@ -4348,5 +4416,6 @@ const start=()=>{clearInterval(timer);timer=setInterval(pulse,2400)}; start();
   requestAnimationFrame(frame);
 })();
 </script>
+<script type="module" src="/auth.js"></script>
 </body>
 </html>
