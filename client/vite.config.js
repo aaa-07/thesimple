@@ -30,7 +30,12 @@ const workRoutes = {
   '/work/2': '/src/pages/verity.html',
   '/work/3': '/src/pages/cybersecurity.html',
   '/work/4': '/src/pages/market_intelligence.html',
-  '/work/5': '/src/pages/neoma.html'
+  '/work/5': '/src/pages/neoma.html',
+  // Same clean-URL treatment for the Products/Made/Journal nav pages —
+  // the nav links to these short paths instead of exposing /src/pages/.
+  '/products': '/src/pages/products.html',
+  '/made': '/src/pages/made.html',
+  '/journal': '/src/pages/journal.html'
 };
 const workRoutesPlugin = {
   name: 'work-clean-urls',
@@ -49,6 +54,13 @@ const workRoutesPlugin = {
 };
 
 export default defineConfig({
+  // This is a static multi-page site, not a single-page app — without this,
+  // Vite's dev server falls back to serving the homepage (index.html) for any
+  // unmatched request. That silently broke the small iframe previews on the
+  // Products page (e.g. src="demos/tt-coach.html", which isn't a real file):
+  // instead of failing to load, the iframe rendered the entire homepage.
+  // 'mpa' makes an unmatched request 404 like it does in production, instead.
+  appType: 'mpa',
   plugins: [workRoutesPlugin],
   server: {
     port: 5173,
