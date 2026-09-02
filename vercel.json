@@ -10,6 +10,9 @@
     { "source": "/work/5", "destination": "/src/pages/neoma.html" },
     { "source": "/products", "destination": "/src/pages/products.html" },
     { "source": "/made", "destination": "/src/pages/made.html" },
-    { "source": "/journal", "destination": "/src/pages/journal.html" }
+    { "source": "/journal", "destination": "/src/pages/journal.html" },
+    { "source": "/rally", "destination": "/src/pages/rally.html" },
+    { "source": "/aeryx", "destination": "/src/pages/aeryx.html" },
+    { "source": "/clinic", "destination": "/src/pages/clinic.html" }
   ]
 }

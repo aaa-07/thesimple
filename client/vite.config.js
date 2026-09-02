@@ -35,7 +35,12 @@ const workRoutes = {
   // the nav links to these short paths instead of exposing /src/pages/.
   '/products': '/src/pages/products.html',
   '/made': '/src/pages/made.html',
-  '/journal': '/src/pages/journal.html'
+  '/journal': '/src/pages/journal.html',
+  // "Explore Rally/AERYX/Clinic Flow" chapter pages, ported from the
+  // reference's tt.html/badminton.html/clinic.html.
+  '/rally': '/src/pages/rally.html',
+  '/aeryx': '/src/pages/aeryx.html',
+  '/clinic': '/src/pages/clinic.html'
 };
 const workRoutesPlugin = {
   name: 'work-clean-urls',
