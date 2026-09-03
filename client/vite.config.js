@@ -36,9 +36,9 @@ const workRoutes = {
   '/products': '/src/pages/products.html',
   '/made': '/src/pages/made.html',
   '/journal': '/src/pages/journal.html',
-  // "Explore Rally/AERYX/Clinic Flow" chapter pages, ported from the
+  // "Explore Ping Pong/AERYX/Clinic Flow" chapter pages, ported from the
   // reference's tt.html/badminton.html/clinic.html.
-  '/rally': '/src/pages/rally.html',
+  '/pingpong': '/src/pages/pingpong.html',
   '/aeryx': '/src/pages/aeryx.html',
   '/clinic': '/src/pages/clinic.html'
 };
