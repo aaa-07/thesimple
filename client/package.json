@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "node scripts/seo-check.mjs",
+    "seo-check": "node scripts/seo-check.mjs",
     "preview": "vite preview"
   },
   "devDependencies": {
